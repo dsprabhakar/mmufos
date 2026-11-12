@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties - MMUFoS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/properties.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <span class="logo-main">MMUFoS</span>
+          <span class="logo-sub">Mediators Market of Universe</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About FoS</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="properties.html" class="active">Properties</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#" class="login-link" id="loginLink" onclick="openLoginModal(event)">Login</a></li>
+        </ul>
+        <div class="user-welcome" id="userWelcome" style="display:none;">
+          <a href="#" class="welcome-link" id="welcomeLink" onclick="toggleDashboard(event)">Welcome <span id="userName"></span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="properties-hero">
+    <div class="properties-hero-overlay"></div>
+    <div class="container properties-hero-content">
+      <h1 class="hero-title">FoS - Fractional Ownership Space - Sales</h1>
+      <p class="hero-spv">Special Purpose Vehicle</p>
+    </div>
+  </section>
+
+  <!-- Dropdown Menus Section -->
+  <section class="dropdown-section">
+    <div class="container">
+      <div class="dropdown-row">
+
+        <!-- Properties Dropdown -->
+        <div class="dropdown-group">
+          <label class="dropdown-label">Properties</label>
+          <div class="cascade-wrapper">
+            <div class="cascade-menu" id="propertiesMenu">
+              <div class="cascade-trigger" id="propertiesTrigger">
+                <span id="propertiesSelected">Select a Property</span>
+                <span class="cascade-arrow">&#9662;</span>
+              </div>
+              <ul class="cascade-list" id="propertiesList">
+                <li data-property="marina-bay">Marina Bay Towers - OMR</li>
+                <li data-property="adyar-grand">Adyar Grand Square - Adyar</li>
+                <li data-property="tnagar-heritage">T. Nagar Heritage Hub</li>
+                <li data-property="velachery-prime">Velachery Prime Plaza</li>
+                <li data-property="anna-nagar">Anna Nagar Sky Residences</li>
+              </ul>
+            </div>
+
+            <!-- Property Sub-dropdown -->
+            <div class="cascade-sub" id="propertySub">
+              <div class="cascade-trigger sub-trigger">
+                <span id="propertySubSelected">Details</span>
+                <span class="cascade-arrow">&#9662;</span>
+              </div>
+              <ul class="cascade-list" id="propertySubList">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Dropdown -->
+        <div class="dropdown-group">
+          <label class="dropdown-label">Products</label>
+          <div class="cascade-wrapper">
+            <div class="cascade-menu" id="productsMenu">
+              <div class="cascade-trigger" id="productsTrigger">
+                <span id="productsSelected">Select a Product</span>
+                <span class="cascade-arrow">&#9662;</span>
+              </div>
+              <ul class="cascade-list" id="productsList">
+                <li data-product="laptop">Laptop</li>
+                <li data-product="desktop">Desktop</li>
+                <li data-product="all-in-one">All-in-One</li>
+                <li data-product="mini-pc">Mini PC</li>
+              </ul>
+            </div>
+
+            <!-- Product Sub-dropdown -->
+            <div class="cascade-sub" id="productSub">
+              <div class="cascade-trigger sub-trigger">
+                <span id="productSubSelected">Options</span>
+                <span class="cascade-arrow">&#9662;</span>
+              </div>
+              <ul class="cascade-list" id="productSubList">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jewels Dropdown -->
+        <div class="dropdown-group">
+          <label class="dropdown-label">Jewels</label>
+          <div class="cascade-wrapper">
+            <div class="cascade-menu" id="jewelsMenu">
+              <div class="cascade-trigger" id="jewelsTrigger">
+                <span id="jewelsSelected">Select Jewellery</span>
+                <span class="cascade-arrow">&#9662;</span>
+              </div>
+              <ul class="cascade-list" id="jewelsList">
+                <li data-jewel="chains">Chains</li>
+                <li data-jewel="bracelets">Bracelets</li>
+                <li data-jewel="earrings">Earrings</li>
+                <li data-jewel="bangles">Bangles</li>
+                <li data-jewel="rings">Rings</li>
+              </ul>
+            </div>
+
+            <!-- Jewel Sub-dropdown -->
+            <div class="cascade-sub" id="jewelSub">
+              <div class="cascade-trigger sub-trigger">
+                <span id="jewelSubSelected">Options</span>
+                <span class="cascade-arrow">&#9662;</span>
+              </div>
+              <ul class="cascade-list" id="jewelSubList">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Details Display -->
+  <section class="selection-display" id="selectionDisplay">
+    <div class="container">
+      <div class="selection-card" id="selectionCard">
+        <h3 id="selectionTitle">Select a property and product to view details</h3>
+        <div class="selection-details" id="selectionDetails"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mediators Market of Universe. All rights reserved.</p>
+        <p class="disclaimer">FoS (Fractional Ownership of Space) is not registered. Only UDS (Undivided Share of Land) will be registered. Token advances are in multiples of &#8377;500. Refund of unallocated advance is available only after 3 years from the date of payment. Allocated advance can exit after 24 months.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+      <h2 class="modal-title">Login</h2>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <input type="text" id="loginUsername" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- User Dashboard Modal -->
+  <div class="modal-overlay" id="dashboardModal">
+    <div class="modal dashboard-modal">
+      <button class="modal-close" onclick="closeDashboard()">&times;</button>
+      <h2 class="modal-title" id="dashboardTitle">My Advance Summary</h2>
+      <table class="advance-table">
+        <thead>
+          <tr>
+            <th>Total Advance</th>
+            <th>Non-Allocated Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="totalAdvance">&#8377;0</td>
+            <td id="nonAllocated">&#8377;0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="refund-info">
+        <span class="refund-label">Unallocated Advance Refund Eligible:</span>
+        <span id="refundEligibleDate">—</span>
+        <span id="refundStatus" class="refund-status">—</span>
+      </div>
+      <p class="rent-note" id="rentNote">MMU sends rent only for allocated amount. No rent is sent for the non-allocated amount.</p>
+      <h3 class="alloc-heading">Allocation Details (Rent Earning)</h3>
+      <table class="allocation-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Space</th>
+            <th>Allocated</th>
+            <th>Rent/Month</th>
+            <th>Exit Date</th>
+            <th>Certificate</th>
+          </tr>
+        </thead>
+        <tbody id="allocationBody"></tbody>
+      </table>
+      <button class="btn btn-outline logout-btn" onclick="handleLogout()" style="margin-top:20px;color:var(--color-text);border-color:var(--color-border);">Logout</button>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div class="modal-overlay" id="certificateModal">
+    <div class="modal certificate-modal">
+      <button class="modal-close" onclick="closeCertificate()">&times;</button>
+      <div id="certificateBody"></div>
+    </div>
+  </div>
+
+  <script src="js/properties.js"></script>
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMUFoS - Fractional Ownership of Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <span class="logo-main">MMUFoS</span>
+          <span class="logo-sub">Mediators Market of Universe</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About FoS</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" class="login-link" id="loginLink" onclick="openLoginModal(event)">Login</a></li>
+        </ul>
+        <div class="user-welcome" id="userWelcome" style="display:none;">
+          <a href="#" class="welcome-link" id="welcomeLink" onclick="toggleDashboard(event)">Welcome <span id="userName"></span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">FoS - Fractional Ownership Space - Sales</h1>
+      <p class="hero-spv">Special Purpose Vehicle</p>
+      <p class="hero-tagline">Own a fraction. Build your future. One square foot at a time.</p>
+      <div class="hero-cta">
+        <a href="properties.html" class="btn btn-primary">Explore Properties</a>
+        <a href="#about" class="btn btn-outline">Learn About FoS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About FoS Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title">What is Fractional Ownership of Space?</h2>
+      <p class="section-subtitle">A revolutionary way to invest in real estate — one square foot at a time</p>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">📐</div>
+          <h3>Buy by the Square Foot</h3>
+          <p>Purchase shares of one square foot or more in premium properties. No need to buy an entire unit — own exactly the space you want.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🏛️</div>
+          <h3>Special Purpose Vehicle</h3>
+          <p>Each property is held under a dedicated SPV structure, ensuring transparent ownership, legal clarity, and professional management.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🔑</div>
+          <h3>Not UDS — It's FoS</h3>
+          <p>Unlike traditional Undivided Share of Land, FoS gives you fractional ownership of actual built-up space in the property.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">💰</div>
+          <h3>Affordable Entry</h3>
+          <p>Start with a minimal advance and own a share in Chennai's prime real estate. Real estate investing, made accessible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Simple steps to own your fractional space</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Choose a Property</h3>
+          <p>Browse our curated list of premium properties across Chennai and select the one that fits your investment goals.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Select Your Space</h3>
+          <p>Decide how many square feet of space you want to own — starting from just one square foot.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Pay Your Advance</h3>
+          <p>Secure your fractional ownership by paying the advance. Your share is locked in under the SPV structure.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Own & Earn</h3>
+          <p>Receive your ownership certificate and start earning returns from your fractional space in the property.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Section -->
+  <section class="section properties" id="properties">
+    <div class="container">
+      <h2 class="section-title">Featured Properties</h2>
+      <p class="section-subtitle">Premium spaces available for fractional ownership in Chennai</p>
+      <div class="property-grid">
+        <div class="property-card">
+          <div class="property-image">
+            <div class="property-badge">Available</div>
+            <div class="property-placeholder">Property Image</div>
+          </div>
+          <div class="property-details">
+            <h3>Marina Bay Towers</h3>
+            <p class="property-location">📍 OMR, Chennai</p>
+            <div class="property-stats">
+              <div class="stat">
+                <span class="stat-value">₹2,500</span>
+                <span class="stat-label">per sq ft</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">450</span>
+                <span class="stat-label">sq ft available</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm">Pay Advance</a>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-image">
+            <div class="property-badge">Available</div>
+            <div class="property-placeholder">Property Image</div>
+          </div>
+          <div class="property-details">
+            <h3>Adyar Grand Square</h3>
+            <p class="property-location">📍 Adyar, Chennai</p>
+            <div class="property-stats">
+              <div class="stat">
+                <span class="stat-value">₹3,200</span>
+                <span class="stat-label">per sq ft</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">320</span>
+                <span class="stat-label">sq ft available</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm">Pay Advance</a>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-image">
+            <div class="property-badge">Coming Soon</div>
+            <div class="property-placeholder">Property Image</div>
+          </div>
+          <div class="property-details">
+            <h3>T. Nagar Heritage Hub</h3>
+            <p class="property-location">📍 T. Nagar, Chennai</p>
+            <div class="property-stats">
+              <div class="stat">
+                <span class="stat-value">₹4,100</span>
+                <span class="stat-label">per sq ft</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">600</span>
+                <span class="stat-label">sq ft available</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm">Register Interest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Ready to own your fractional space? Contact us today</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Mediators Market of Universe</h3>
+          <p>Chennai, Tamil Nadu, India</p>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>info@mmufos.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>+91 XXXXX XXXXX</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>Chennai, Tamil Nadu</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Your Phone Number" required>
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="" disabled selected>Interested Property</option>
+              <option>Marina Bay Towers - OMR</option>
+              <option>Adyar Grand Square - Adyar</option>
+              <option>T. Nagar Heritage Hub - T. Nagar</option>
+              <option>Other / General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="number" min="500" step="500" placeholder="Token Advance Amount (multiples of &#8377;500)" required data-advance-input>
+          </div>
+          <div class="form-group">
+            <textarea rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>MMUFoS</h3>
+          <p>Mediators Market of Universe — pioneering Fractional Ownership of Space in Chennai's real estate market.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About FoS</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mediators Market of Universe. All rights reserved.</p>
+        <p class="disclaimer">FoS (Fractional Ownership of Space) is not registered. Only UDS (Undivided Share of Land) will be registered. Token advances are in multiples of &#8377;500. Refund of unallocated advance is available only after 3 years from the date of payment. Allocated advance can exit after 24 months.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+      <h2 class="modal-title">Login</h2>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <input type="text" id="loginUsername" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- User Dashboard Modal -->
+  <div class="modal-overlay" id="dashboardModal">
+    <div class="modal dashboard-modal">
+      <button class="modal-close" onclick="closeDashboard()">&times;</button>
+      <h2 class="modal-title" id="dashboardTitle">My Advance Summary</h2>
+      <table class="advance-table">
+        <thead>
+          <tr>
+            <th>Total Advance</th>
+            <th>Non-Allocated Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="totalAdvance">&#8377;0</td>
+            <td id="nonAllocated">&#8377;0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="refund-info">
+        <span class="refund-label">Unallocated Advance Refund Eligible:</span>
+        <span id="refundEligibleDate">—</span>
+        <span id="refundStatus" class="refund-status">—</span>
+      </div>
+      <p class="rent-note" id="rentNote">MMU sends rent only for allocated amount. No rent is sent for the non-allocated amount.</p>
+      <h3 class="alloc-heading">Allocation Details (Rent Earning)</h3>
+      <table class="allocation-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Space</th>
+            <th>Allocated</th>
+            <th>Rent/Month</th>
+            <th>Exit Date</th>
+            <th>Certificate</th>
+          </tr>
+        </thead>
+        <tbody id="allocationBody"></tbody>
+      </table>
+      <button class="btn btn-outline logout-btn" onclick="handleLogout()" style="margin-top:20px;color:var(--color-text);border-color:var(--color-border);">Logout</button>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div class="modal-overlay" id="certificateModal">
+    <div class="modal certificate-modal">
+      <button class="modal-close" onclick="closeCertificate()">&times;</button>
+      <div id="certificateBody"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
