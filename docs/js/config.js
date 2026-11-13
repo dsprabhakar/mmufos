@@ -1,3 +1,3 @@
-const SUPABASE_URL = '';
-const SUPABASE_ANON_KEY = '';
+const SUPABASE_URL = 'https://owxgdrfrsmrhrvagrwhc.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im93eGdkcmZyc21yaHJ2YWdyd2hjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ0NTkyMzUsImV4cCI6MjExMDAzNTIzNX0.wBunxuRd0VQXbOqaWLOKMCSuvQhzmy-EX5QyfzozolE';
 const USE_DATABASE = SUPABASE_URL && SUPABASE_ANON_KEY;
