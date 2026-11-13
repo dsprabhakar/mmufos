@@ -19,12 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (e) => {
+  window.sendWhatsApp = function(e) {
     e.preventDefault();
-    alert('Thank you for your inquiry! Our team will contact you shortly regarding your advance.');
-    contactForm.reset();
-  });
+    const name = document.getElementById('cName').value;
+    const email = document.getElementById('cEmail').value;
+    const phone = document.getElementById('cPhone').value;
+    const property = document.getElementById('cProperty').value;
+    const amount = document.getElementById('cAmount').value;
+    const message = document.getElementById('cMessage').value;
+
+    const text = '*New MMUFoS Inquiry*\n\n' +
+      '*Name:* ' + name + '\n' +
+      '*Email:* ' + email + '\n' +
+      '*Phone:* ' + phone + '\n' +
+      '*Property:* ' + property + '\n' +
+      '*Token Advance:* ₹' + Number(amount).toLocaleString('en-IN') + '\n' +
+      (message ? '*Message:* ' + message : '');
+
+    const url = 'https://wa.me/919940017933?text=' + encodeURIComponent(text);
+    window.open(url, '_blank');
+    document.getElementById('contactForm').reset();
+  };
 
   const observerOptions = {
     threshold: 0.1,
